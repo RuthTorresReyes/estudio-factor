@@ -1,0 +1,593 @@
+/* Variables de color compartidas */
+@import url("variables.css");
+
+/* Configuración general */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-cream);
+    color: var(--color-dark);
+}
+
+
+/* Barra de navegación */
+.navbar {
+    width: 100%;
+    min-height: 65px;
+    background-color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.lo {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links a {
+    display: block;
+    color: var(--color-cream);
+    text-align: center;
+    padding: 20px 18px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--color-orange);
+    color: var(--color-dark);
+}
+
+.nav-links a.active {
+    background-color: var(--color-teal-light);
+    color: var(--color-dark);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-cream);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+/* Hero */
+.hero {
+    min-height: 85vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    background-color: var(--color-cream);
+}
+
+.hero-content {
+    padding: 60px;
+    max-width: 650px;
+    margin: auto;
+}
+
+.hero .eyebrow {
+    color: var(--color-teal);
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: clamp(50px, 6vw, 90px);
+    line-height: 1;
+    margin-bottom: 25px;
+    background: linear-gradient(to right, var(--color-orange), var(--color-rust), var(--color-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+    max-width: 550px;
+    font-size: 20px;
+    line-height: 1.6;
+    color: var(--color-dark);
+    margin-bottom: 30px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.hero .boton {
+    display: inline-block;
+    padding: 14px 28px;
+    background-color: var(--color-dark);
+    color: var(--color-orange);
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    transition: 0.3s ease;
+}
+
+.hero .boton:hover {
+    background-color: var(--color-orange);
+    color: var(--color-dark);
+    transform: translateY(-3px);
+}
+
+.hero .boton-secundario {
+    background-color: transparent;
+    border: 2px solid var(--color-dark);
+    color: var(--color-dark);
+}
+
+.hero .boton-secundario:hover {
+    background-color: var(--color-dark);
+    color: var(--color-cream);
+}
+
+.hero-image {
+    min-height: 85vh;
+    background-image: url("principal.png");
+    background-size: cover;
+    background-position: center;
+}
+
+
+/* Genéricos */
+section {
+    width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    font-family: Arial, sans-serif;
+}
+
+.eyebrow {
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.boton {
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+
+/* Sobre nosotros */
+.sobre-nosotros {
+    background-color: var(--color-dark);
+    color: var(--color-cream);
+    padding: 100px 30px;
+}
+
+.sobre-contenido {
+    max-width: 900px;
+    margin: auto;
+    text-align: center;
+}
+
+.sobre-contenido h2 {
+    font-size: clamp(35px, 5vw, 60px);
+    margin-bottom: 30px;
+}
+
+.sobre-contenido p:not(.eyebrow) {
+    font-size: 18px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+
+/* Servicios */
+.servicios {
+    padding: 100px 30px;
+    background-color: var(--color-cream);
+}
+
+.servicios-titulo {
+    max-width: 1200px;
+    margin: 0 auto 50px;
+    text-align: center;
+}
+
+.servicios-titulo h2 {
+    font-size: clamp(40px, 5vw, 60px);
+    margin-top: 10px;
+}
+
+.servicios-grid {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.servicio {
+    background-color: #fff;
+    padding: 40px 30px;
+    border-radius: 25px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    transition: 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-8px);
+}
+
+.servicio-numero {
+    font-family: "Courier New", monospace;
+    font-size: 18px;
+    color: var(--color-orange);
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.servicio h3 {
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.servicio p {
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+}
+
+.servicio a {
+    color: var(--color-blue);
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.servicio a:hover {
+    color: var(--color-rust);
+}
+
+
+/* Contacto */
+.contacto {
+    background-color: var(--color-rust);
+    color: var(--color-cream);
+    padding: 100px 30px;
+    text-align: center;
+}
+
+.contacto-contenido {
+    max-width: 800px;
+    margin: auto;
+}
+
+.contacto h2 {
+    font-size: clamp(40px, 5vw, 65px);
+    margin: 15px 0 20px;
+}
+
+.contacto p:not(.eyebrow) {
+    font-size: 19px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.contacto .boton {
+    background-color: var(--color-dark);
+    color: var(--color-orange);
+}
+
+.contacto .boton:hover {
+    background-color: var(--color-cream);
+    color: var(--color-dark);
+}
+
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: var(--color-dark);
+    padding: 30px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: var(--color-footer-text);
+    font-size: 14px;
+}
+
+.social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.social li a:hover {
+    color: var(--color-orange);
+    transform: translateY(-4px);
+}
+
+
+/* Botón volver arriba */
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    color: var(--color-orange);
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    z-index: 5000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--color-orange);
+    color: var(--color-dark);
+    transform: translateY(-4px);
+}
+
+
+/* Tablet */
+@media screen and (max-width: 1000px) {
+
+    .nav-links a {
+        padding: 18px 12px;
+        font-size: 15px;
+    }
+
+    .hero-content {
+        padding: 40px;
+    }
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .hero-description {
+        font-size: 18px;
+    }
+
+}
+
+
+/* Celular */
+@media screen and (max-width: 768px) {
+
+    /* Navbar */
+    .navbar {
+        min-height: 65px;
+        padding: 0 10px;
+    }
+
+    .lo {
+        width: 65px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-dark);
+        flex-direction: column;
+    }
+
+    .nav-links.responsive {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Hero */
+    .hero {
+        min-height: auto;
+        grid-template-columns: 1fr;
+    }
+
+    .hero-content {
+        padding: 55px 25px;
+        text-align: center;
+        max-width: 100%;
+    }
+
+    .hero .eyebrow {
+        font-size: 13px;
+        letter-spacing: 2px;
+    }
+
+    .hero h1 {
+        font-size: 52px;
+        line-height: 1.05;
+    }
+
+    .hero-description {
+        font-size: 17px;
+        line-height: 1.5;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero .boton {
+        padding: 13px 22px;
+    }
+
+    .hero-image {
+        min-height: 450px;
+        background-size: cover;
+        background-position: center;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    /* Secciones */
+    .sobre-nosotros {
+        padding: 70px 25px;
+    }
+
+    .sobre-contenido p:not(.eyebrow) {
+        font-size: 16px;
+        text-align: left;
+    }
+
+    .servicios {
+        padding: 70px 20px;
+    }
+
+    .servicios-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .servicio {
+        padding: 30px 25px;
+    }
+
+    .contacto {
+        padding: 70px 25px;
+    }
+
+    .contacto h2 {
+        font-size: 40px;
+    }
+
+    .contacto p:not(.eyebrow) {
+        font-size: 16px;
+    }
+
+}
+
+
+/* Celulares pequeños */
+@media screen and (max-width: 400px) {
+
+    .hero-content {
+        padding: 45px 18px;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .hero-description {
+        font-size: 15px;
+    }
+
+    .hero .eyebrow {
+        font-size: 11px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero .boton {
+        width: 200px;
+        text-align: center;
+    }
+
+    .hero-image {
+        min-height: 350px;
+    }
+
+}
+
+
+/* Botón volver arriba en celular */
+@media screen and (max-width: 600px) {
+
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 21px;
+    }
+
+}

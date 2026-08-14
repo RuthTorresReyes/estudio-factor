@@ -1,0 +1,500 @@
+/* Variables de color */
+:root {
+    --color-dark: #03071e;
+    --color-cream: #e9d8a6;
+    --color-orange: #ee9b00;
+    --color-teal: #0a9396;
+    --color-teal-light: #94d2bd;
+    --color-blue: #005f73;
+    --color-rust: #bb3e03;
+    --color-white: #ffffff;
+    --color-footer-text: #b5dac9;
+}
+
+/* Configuración general */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-cream);
+    color: var(--color-dark);
+}
+
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    min-height: 65px;
+    background-color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.lo {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links a {
+    display: block;
+    color: var(--color-cream);
+    padding: 20px 18px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--color-orange);
+    color: var(--color-dark);
+}
+
+.nav-links a.active {
+    background-color: var(--color-teal-light);
+    color: var(--color-dark);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-cream);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+/* Intro */
+.contacto-intro {
+    max-width: 850px;
+    margin: auto;
+    padding: 75px 25px 45px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--color-teal);
+    font-family: "Courier New", monospace;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.contacto-intro h1 {
+    font-size: 55px;
+    margin-bottom: 20px;
+    background: linear-gradient(to right, var(--color-orange), var(--color-rust), var(--color-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.contacto-intro > p:last-child {
+    max-width: 700px;
+    margin: auto;
+    font-size: 18px;
+    line-height: 1.7;
+}
+
+
+/* Contenedor contacto */
+.contacto-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 30px;
+}
+
+
+/* Información */
+.contacto-info {
+    padding: 55px;
+    background-color: var(--color-blue);
+    color: var(--color-cream);
+    border-radius: 25px;
+}
+
+.contacto-info .eyebrow {
+    color: var(--color-teal-light);
+}
+
+.contacto-info h2 {
+    font-size: 38px;
+    line-height: 1.2;
+    margin-bottom: 25px;
+}
+
+.contacto-info > p:not(.eyebrow) {
+    font-size: 17px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.contacto-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-top: 1px solid rgba(233, 216, 166, 0.25);
+}
+
+.contacto-item span {
+    color: var(--color-orange);
+    font-family: "Courier New", monospace;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.contacto-item h3 {
+    margin-bottom: 6px;
+}
+
+.contacto-item p {
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+
+/* Formulario */
+.formulario-container {
+    background-color: var(--color-white);
+    padding: 45px;
+    border-radius: 25px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.formulario-aviso {
+    margin-bottom: 30px;
+    padding: 12px 15px;
+    background-color: var(--color-cream);
+    border-left: 4px solid var(--color-orange);
+    color: var(--color-dark);
+    font-size: 14px;
+}
+
+.campo {
+    margin-bottom: 22px;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: var(--color-dark);
+}
+
+.campo input,
+.campo select,
+.campo textarea {
+    width: 100%;
+    padding: 14px 15px;
+    border: 1px solid #d4c18b;
+    border-radius: 10px;
+    background-color: #faf8ef;
+    color: var(--color-dark);
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.campo input:focus,
+.campo select:focus,
+.campo textarea:focus {
+    border-color: var(--color-teal);
+    box-shadow: 0 0 0 3px rgba(10, 147, 150, 0.15);
+}
+
+.campo textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.campo input.campo-invalido,
+.campo select.campo-invalido,
+.campo textarea.campo-invalido {
+    border-color: var(--color-rust);
+}
+
+.error {
+    display: block;
+    margin-top: 5px;
+    color: var(--color-rust);
+    font-size: 13px;
+    min-height: 16px;
+}
+
+
+/* Botones */
+.boton {
+    display: inline-block;
+    padding: 14px 28px;
+    border: none;
+    background-color: var(--color-dark);
+    color: var(--color-orange);
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.boton:hover {
+    background-color: var(--color-orange);
+    color: var(--color-dark);
+    transform: translateY(-3px);
+}
+
+.formulario-container .boton {
+    width: 100%;
+}
+
+.boton-secundario {
+    background-color: var(--color-rust);
+    color: var(--color-cream);
+}
+
+
+/* Mensaje de formulario */
+.form-message {
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 10px;
+    font-size: 15px;
+    text-align: center;
+    display: none;
+}
+
+.form-message.show {
+    display: block;
+    background-color: var(--color-teal-light);
+    color: var(--color-dark);
+}
+
+.form-message.error-message.show {
+    background-color: #f5d5c8;
+    color: var(--color-rust);
+}
+
+
+/* Volver */
+.volver {
+    padding: 45px 25px 70px;
+    text-align: center;
+}
+
+
+/* Footer */
+footer {
+    background-color: var(--color-dark);
+    padding: 30px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: var(--color-footer-text);
+    font-size: 14px;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.social a {
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.social a:hover {
+    color: var(--color-orange);
+}
+
+
+/* Botón volver arriba */
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    color: var(--color-orange);
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--color-orange);
+    color: var(--color-dark);
+}
+
+
+/* Tablet */
+@media screen and (max-width: 900px) {
+
+    .nav-links a {
+        padding: 18px 10px;
+        font-size: 14px;
+    }
+
+    .contacto-container {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* Celular */
+@media screen and (max-width: 768px) {
+
+    .navbar {
+        min-height: 65px;
+        padding: 0 10px;
+    }
+
+    .lo {
+        width: 65px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        flex-direction: column;
+        background-color: var(--color-dark);
+    }
+
+    .nav-links.responsive {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .contacto-intro {
+        padding: 45px 20px 30px;
+    }
+
+    .contacto-intro h1 {
+        font-size: 38px;
+    }
+
+    .contacto-intro > p:last-child {
+        font-size: 16px;
+    }
+
+    .contacto-container {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .contacto-info {
+        padding: 35px 25px;
+    }
+
+    .contacto-info h2 {
+        font-size: 30px;
+    }
+
+    .formulario-container {
+        padding: 30px 20px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+/* Celular pequeño */
+@media screen and (max-width: 400px) {
+
+    .contacto-intro h1 {
+        font-size: 32px;
+    }
+
+    .contacto-info h2 {
+        font-size: 26px;
+    }
+
+    .formulario-aviso {
+        font-size: 13px;
+    }
+
+    .back-to-top {
+        width: 45px;
+        height: 45px;
+        right: 15px;
+        bottom: 15px;
+    }
+
+}

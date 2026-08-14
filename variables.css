@@ -1,0 +1,14 @@
+/* Variables de color — Estudio Factor
+   Archivo compartido por todas las páginas del sitio.
+   Cambia un color aquí y se actualiza en todo el sitio. */
+
+:root {
+    --color-dark: #03071e;
+    --color-cream: #e9d8a6;
+    --color-orange: #ee9b00;
+    --color-teal: #0a9396;
+    --color-teal-light: #94d2bd;
+    --color-blue: #005f73;
+    --color-rust: #bb3e03;
+    --color-footer-text: #b5dac9;
+}

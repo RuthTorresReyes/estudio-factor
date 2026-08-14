@@ -1,0 +1,582 @@
+/* Variables de color compartidas */
+@import url("variables.css");
+
+/* Configuración general */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: var(--color-cream);
+    color: var(--color-dark);
+}
+
+
+/* Barra de navegación */
+.navbar {
+    width: 100%;
+    min-height: 65px;
+    background-color: var(--color-dark);
+    display: flex;
+    align-items: center;
+    padding: 0 15px;
+    position: relative;
+    z-index: 1000;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    padding: 8px 15px;
+    text-decoration: none;
+}
+
+.lo {
+    width: 70px;
+    height: auto;
+    object-fit: contain;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    margin-left: auto;
+}
+
+.nav-links a {
+    display: block;
+    color: var(--color-cream);
+    text-align: center;
+    padding: 20px 18px;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s ease;
+}
+
+.nav-links a:hover {
+    background-color: var(--color-orange);
+    color: var(--color-dark);
+}
+
+.nav-links a.active {
+    background-color: var(--color-teal-light);
+    color: var(--color-dark);
+}
+
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: var(--color-cream);
+    font-size: 28px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+
+/* Presentación */
+.intro {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 70px 25px 55px;
+    text-align: center;
+}
+
+.eyebrow {
+    color: var(--color-teal);
+    font-family: "Courier New", monospace;
+    font-size: 17px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    margin-bottom: 12px;
+}
+
+.intro h1 {
+    margin-bottom: 20px;
+    font-size: 52px;
+    line-height: 1.1;
+    font-weight: bold;
+    background: linear-gradient(to right, var(--color-orange), var(--color-rust), var(--color-dark));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.descripcion {
+    max-width: 750px;
+    margin: 0 auto;
+    font-size: 18px;
+    line-height: 1.7;
+    color: var(--color-dark);
+}
+
+
+/* Servicios */
+.servicios-estudio {
+    width: 100%;
+}
+
+.servicio-estudio {
+    width: 100%;
+    min-height: 500px;
+    display: flex;
+    align-items: stretch;
+}
+
+.servicio-imagen {
+    width: 50%;
+    overflow: hidden;
+}
+
+.servicio-imagen img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    min-height: 500px;
+    object-fit: cover;
+    transition: transform 0.6s ease;
+}
+
+.servicio-estudio:hover .servicio-imagen img {
+    transform: scale(1.05);
+}
+
+.servicio-contenido {
+    width: 50%;
+    padding: 65px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    background-color: var(--color-blue);
+    color: var(--color-cream);
+}
+
+/* Alternancia de colores por bloque */
+.servicio-estudio:nth-child(2) .servicio-contenido {
+    background-color: var(--color-orange);
+    color: var(--color-dark);
+}
+
+.servicio-estudio:nth-child(3) .servicio-contenido {
+    background-color: var(--color-rust);
+    color: var(--color-cream);
+}
+
+.servicio-estudio:nth-child(4) .servicio-contenido {
+    background-color: var(--color-teal);
+    color: var(--color-cream);
+}
+
+.servicio-estudio:nth-child(5) .servicio-contenido {
+    background-color: var(--color-dark);
+    color: var(--color-cream);
+}
+
+.servicio-invertido {
+    flex-direction: row-reverse;
+}
+
+.numero {
+    display: inline-block;
+    margin-bottom: 18px;
+    color: var(--color-orange);
+    font-family: "Courier New", monospace;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Ajustar número en fondo naranja */
+.servicio-estudio:nth-child(2) .numero {
+    color: var(--color-dark);
+}
+
+.servicio-contenido .eyebrow {
+    color: var(--color-teal-light);
+    margin-bottom: 10px;
+}
+
+.servicio-contenido h2 {
+    max-width: 600px;
+    margin-bottom: 20px;
+    font-size: 42px;
+    line-height: 1.15;
+}
+
+.servicio-contenido > p:not(.eyebrow) {
+    max-width: 600px;
+    margin-bottom: 30px;
+    font-size: 17px;
+    line-height: 1.7;
+}
+
+
+/* Botones */
+.boton {
+    display: inline-block;
+    min-width: 190px;
+    padding: 14px 28px;
+    background-color: var(--color-dark);
+    color: var(--color-orange);
+    text-decoration: none;
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.boton:hover {
+    background-color: var(--color-orange);
+    color: var(--color-dark);
+    transform: translateY(-4px);
+}
+
+/* Botón sobre fondo naranja */
+.servicio-estudio:nth-child(2) .boton {
+    background-color: var(--color-dark);
+    color: var(--color-orange);
+}
+
+.servicio-estudio:nth-child(2) .boton:hover {
+    background-color: var(--color-blue);
+    color: var(--color-cream);
+}
+
+
+/* Contacto */
+.contacto {
+    width: 100%;
+    padding: 80px 25px;
+    background-color: var(--color-cream);
+    color: var(--color-dark);
+    text-align: center;
+}
+
+.contacto h2 {
+    max-width: 850px;
+    margin: 0 auto 20px;
+    font-size: 42px;
+    line-height: 1.2;
+}
+
+.contacto > p:not(.eyebrow) {
+    max-width: 700px;
+    margin: 0 auto 30px;
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.contacto-botones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.boton-secundario {
+    background-color: var(--color-rust);
+    color: var(--color-cream);
+}
+
+.boton-secundario:hover {
+    background-color: var(--color-dark);
+    color: var(--color-orange);
+}
+
+
+/* Footer */
+footer {
+    width: 100%;
+    background-color: var(--color-dark);
+    padding: 30px 20px;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-content p {
+    color: var(--color-footer-text);
+    font-size: 14px;
+}
+
+.social {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+}
+
+.social li a {
+    display: inline-block;
+    color: var(--color-footer-text);
+    text-decoration: none;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.social li a:hover {
+    color: var(--color-orange);
+    transform: translateY(-4px);
+}
+
+
+/* Botón volver arriba */
+.back-to-top {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    width: 50px;
+    height: 50px;
+    border: none;
+    border-radius: 50%;
+    background-color: var(--color-dark);
+    color: var(--color-orange);
+    font-size: 24px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transform: translateY(15px);
+    transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease, background-color 0.3s ease;
+    z-index: 5000;
+}
+
+.back-to-top.show {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+}
+
+.back-to-top:hover {
+    background-color: var(--color-orange);
+    color: var(--color-dark);
+    transform: translateY(-4px);
+}
+
+
+/* Tablet */
+@media screen and (max-width: 1000px) {
+
+    .nav-links a {
+        padding: 18px 12px;
+        font-size: 15px;
+    }
+
+    .intro h1 {
+        font-size: 45px;
+    }
+
+    .servicio-contenido {
+        padding: 45px;
+    }
+
+    .servicio-contenido h2 {
+        font-size: 35px;
+    }
+
+    .servicio-contenido > p:not(.eyebrow) {
+        font-size: 16px;
+    }
+
+}
+
+
+/* Celular */
+@media screen and (max-width: 768px) {
+
+    /* Navegación */
+    .navbar {
+        min-height: 65px;
+        padding: 0 10px;
+    }
+
+    .lo {
+        width: 65px;
+    }
+
+    .menu-toggle {
+        display: block;
+        margin-left: auto;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 65px;
+        left: 0;
+        width: 100%;
+        background-color: var(--color-dark);
+        flex-direction: column;
+    }
+
+    .nav-links.responsive {
+        display: flex;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 16px;
+        text-align: center;
+        border-top: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    /* Presentación */
+    .intro {
+        padding: 45px 20px 35px;
+    }
+
+    .eyebrow {
+        font-size: 14px;
+        letter-spacing: 1.5px;
+    }
+
+    .intro h1 {
+        font-size: 36px;
+        line-height: 1.15;
+    }
+
+    .descripcion {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Servicios */
+    .servicio-estudio,
+    .servicio-invertido {
+        flex-direction: column;
+        min-height: auto;
+    }
+
+    .servicio-imagen {
+        width: 100%;
+        height: 350px;
+    }
+
+    .servicio-imagen img {
+        width: 100%;
+        height: 350px;
+        min-height: 0;
+    }
+
+    .servicio-contenido {
+        width: 100%;
+        padding: 45px 25px;
+    }
+
+    .servicio-contenido h2 {
+        font-size: 32px;
+    }
+
+    .servicio-contenido > p:not(.eyebrow) {
+        font-size: 16px;
+        line-height: 1.6;
+    }
+
+    /* Contacto */
+    .contacto {
+        padding: 60px 20px;
+    }
+
+    .contacto h2 {
+        font-size: 31px;
+    }
+
+    .contacto > p:not(.eyebrow) {
+        font-size: 16px;
+    }
+
+    .contacto-botones {
+        flex-direction: column;
+    }
+
+    .contacto .boton {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Footer */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+}
+
+
+/* Celulares pequeños */
+@media screen and (max-width: 400px) {
+
+    .intro {
+        padding: 40px 15px 25px;
+    }
+
+    .intro h1 {
+        font-size: 30px;
+    }
+
+    .descripcion {
+        font-size: 15px;
+    }
+
+    .servicio-imagen,
+    .servicio-imagen img {
+        height: 280px;
+    }
+
+    .servicio-contenido {
+        padding: 35px 20px;
+    }
+
+    .servicio-contenido h2 {
+        font-size: 27px;
+    }
+
+    .servicio-contenido > p:not(.eyebrow) {
+        font-size: 15px;
+    }
+
+    .numero {
+        font-size: 17px;
+    }
+
+    .contacto h2 {
+        font-size: 27px;
+    }
+
+    .boton {
+        min-width: 0;
+        padding: 12px 22px;
+        font-size: 15px;
+    }
+
+}
+
+
+/* Botón volver arriba en celular */
+@media screen and (max-width: 600px) {
+
+    .back-to-top {
+        right: 15px;
+        bottom: 15px;
+        width: 45px;
+        height: 45px;
+        font-size: 21px;
+    }
+
+}

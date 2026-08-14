@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Fotografía profesional de matrimonios y bodas en Estudio Factor, Rancagua.">
+    <title>Fotografía de Matrimonios | Estudio Factor</title>
+
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Fotografía de Matrimonios | Estudio Factor">
+    <meta property="og:description" content="Capturamos cada emoción y momento especial de tu matrimonio en Rancagua.">
+    <meta property="og:image" content="og-image.jpg">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="es_CL">
+
+    <link rel="stylesheet" href="matrimonio.css">
+    <script src="function.js" defer></script>
+</head>
+<body>
+
+    <!-- Barra de navegación -->
+    <header>
+        <nav class="navbar" id="myNavbar" aria-label="Navegación principal">
+
+            <a href="index.html" class="logo" aria-label="Ir al inicio">
+                <img class="lo" src="logoPhoto.png" alt="Logo de Estudio Factor">
+            </a>
+
+            <div class="nav-links">
+                <a href="index.html">Inicio</a>
+                <a href="matrimonio.html" class="active">Fotografía de Matrimonios</a>
+                <a href="exterior.html">Exterior y Estudio</a>
+                <a href="arriendo.html">Arriendo de Equipos</a>
+                <a href="contacto.html">Contacto</a>
+            </div>
+
+            <button
+                class="menu-toggle"
+                id="menuToggle"
+                type="button"
+                aria-label="Abrir menú de navegación"
+                aria-controls="myNavbar"
+                aria-expanded="false"
+            >
+                ☰
+            </button>
+
+        </nav>
+    </header>
+
+
+    <!-- Contenido principal -->
+    <main>
+
+        <!-- Presentación -->
+        <section class="intro">
+            <p class="eyebrow">HISTORIAS QUE PERMANECEN</p>
+            <h1>Fotografía de Matrimonios</h1>
+            <p class="descripcion">
+                Capturamos cada emoción, mirada y momento especial
+                de tu matrimonio para convertirlo en recuerdos
+                que puedas revivir una y otra vez.
+            </p>
+        </section>
+
+
+        <!-- Galería -->
+        <section class="gallery" aria-label="Galería de matrimonios">
+
+            <article class="card">
+                <img src="matri/matri6.jpg" alt="Pareja durante su matrimonio" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Momentos únicos</h2>
+                    <p>Cada instante cuenta.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="matri/matri1.jpg" alt="Novios durante una sesión fotográfica" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Amor</h2>
+                    <p>Una historia para recordar.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="matri/matri2.jpg" alt="Fotografía de pareja" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Emociones</h2>
+                    <p>Capturamos lo que hace único tu día.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="matri/matri3.jpg" alt="Novios celebrando su matrimonio" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Celebración</h2>
+                    <p>Los grandes momentos merecen ser recordados.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="matri/matri4.jpg" alt="Sesión fotográfica de matrimonio" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Detalles</h2>
+                    <p>La belleza está en cada pequeño momento.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="matri/matri5.jpg" alt="Pareja recién casada" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Recuerdos</h2>
+                    <p>Imágenes que cuentan historias.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="matri/matri7.jpg" alt="Fotografía artística de matrimonio" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Instantes</h2>
+                    <p>Fotografías llenas de emoción.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="matri/matri8.jpg" alt="Novios durante su celebración" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Felicidad</h2>
+                    <p>Un día para recordar siempre.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="matri/matri9.jpg" alt="Pareja durante su sesión de matrimonio" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Historias</h2>
+                    <p>Tu historia, nuestra mirada.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="matri/matri10.jpg" alt="Fotografía de matrimonio" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Momentos</h2>
+                    <p>Para volver a vivirlos.</p>
+                </div>
+            </article>
+
+            <article class="card">
+                <img src="matri/matri11.jpg" alt="Fotografía de novios" class="img" loading="lazy">
+                <div class="overlay">
+                    <h2>Para siempre</h2>
+                    <p>Recuerdos que perduran.</p>
+                </div>
+            </article>
+
+        </section>
+
+
+        <!-- Lightbox -->
+        <div class="lightbox" id="lightbox" aria-hidden="true">
+
+            <button class="lightbox-close" id="lightboxClose" type="button" aria-label="Cerrar fotografía">×</button>
+            <button class="lightbox-prev" id="lightboxPrev" type="button" aria-label="Fotografía anterior">❮</button>
+            <img class="lightbox-img" id="lightboxImg" src="" alt="">
+            <button class="lightbox-next" id="lightboxNext" type="button" aria-label="Fotografía siguiente">❯</button>
+
+        </div>
+
+
+        <!-- Llamado a la acción -->
+        <section class="contacto">
+            <p class="eyebrow">¿TIENES UNA FECHA ESPECIAL?</p>
+            <h2>Hagamos que tus recuerdos duren para siempre.</h2>
+            <a href="contacto.html" class="boton">Solicitar información</a>
+        </section>
+
+    </main>
+
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-content">
+
+            <p>© 2026 Estudio Factor. Todos los derechos reservados.</p>
+
+            <ul class="social">
+                <li><a href="#" aria-label="Facebook">Facebook</a></li>
+                <li><a href="#" aria-label="Instagram">Instagram</a></li>
+                <li><a href="#" aria-label="WhatsApp">WhatsApp</a></li>
+            </ul>
+
+        </div>
+    </footer>
+
+
+    <!-- Botón volver arriba -->
+    <button id="backToTop" class="back-to-top" type="button" aria-label="Volver al inicio">
+        ↑
+    </button>
+
+</body>
+</html>
